@@ -1,0 +1,18 @@
+version: "3.5"
+
+services:
+  jupyter:
+    image: jupytergo
+    container_name: "jupytergo"
+    ports:
+      - "8888:8888"
+    volumes:
+      - type: "bind"
+        source: ./code
+        target: /examples
+    networks:
+      - default
+
+networks:
+  default:
+    name: jupytergo
