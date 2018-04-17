@@ -2,7 +2,7 @@ version: "3.5"
 
 services:
   jupyter:
-    image: jupytergo
+    image: jtemporal/jupytergo
     container_name: "jupytergo"
     ports:
       - "8888:8888"
