@@ -12,12 +12,20 @@ You can use it only with docker:
 
 ```console
 docker pull jtemporal/jupytergo
-docker run -p 8888:8888 --name jupytergo -v ~/jupytergo/code:/examples -it jtemporal/jupytergo
+docker run -p 8888:8888 --name jupytergo -e JUPYTERENV=notebook -v ~/jupytergo/code:/examples -it jtemporal/jupytergo
+# or
+docker run -p 8888:8888 --name jupytergo -e JUPYTERENV=lab -v ~/jupytergo/code:/examples -it jtemporal/jupytergo
 ```
 
-Or with Docker Compose, by clone this repo and doing the following:
+Or with Docker Compose, by cloning this repo and doing the following:
 
 ```console
 cd jupytergo
 docker-compose up
 ```
+
+ps.: docker compose right now it's only configured for jupyter notebooks
+
+## Contributing
+
+Pull requests are very much welcome!
